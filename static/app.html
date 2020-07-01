@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>铁路施工影像采集平台</title>
+    <style>
+        img {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<img src="./bg.png" alt="">
+</body>
+
+<script>
+    function isWeiXin() {
+        var userAgent = window.navigator.userAgent.toLowerCase();
+        if (userAgent.match(/MicroMessenger/i) == 'micromessenger') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    const WeiXin = isWeiXin();
+
+    //判断不是微信浏览器
+    if(!WeiXin){
+        window.location.href="http://www.projecticms.com/static/app.apk";
+    }
+</script>
+</html>
